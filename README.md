@@ -1,4 +1,4 @@
-# Code Maat inofficial Docker image
+# Code Maat unofficial Docker image
 
 A Docker container to run the Code Maat tool provided by Adam Tornhill et al. 
 
