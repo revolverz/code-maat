@@ -8,9 +8,9 @@ RUN wget -q -O /usr/bin/lein \
     https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein \
     && chmod +x /usr/bin/lein
 
-RUN apg-get update
+RUN apt-get update
 
-RUN apt-get install -y git 
+RUN apt-get install -y git
 
 RUN mkdir /app
 WORKDIR /app
@@ -28,4 +28,3 @@ RUN find . -name '*standalone*' -exec bash -c 'mv $0 codemaat-standalone.jar' {}
 ENTRYPOINT ["java","-jar","codemaat-standalone.jar"]
 # ENTRYPOINT ["/usr/bin/lein", "run"]
 CMD ["-h"]
-    
