@@ -8,6 +8,8 @@ RUN wget -q -O /usr/bin/lein \
     https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein \
     && chmod +x /usr/bin/lein
 
+RUN apg-get update
+
 RUN apt-get install -y git 
 
 RUN mkdir /app
